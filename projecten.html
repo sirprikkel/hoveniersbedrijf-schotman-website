@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projecten — Hoveniersbedrijf Schotman</title>
+  <meta name="description" content="Bekijk projecten van Hoveniersbedrijf Schotman. Tuinaanleg in Ravenstein, Nijmegen, Arnhem, Vught, Schaijk, Heesch en Oss.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { 'forest': '#228B22', 'forest-dark': '#1A6B1A', 'earth': '#8B4513', 'earth-light': '#A0522D', 'sky': '#87CEEB', 'cream': '#F5F5DC', 'cream-dark': '#EDE8D0', 'bark': '#2D1B0E' },
+          fontFamily: { 'serif': ['Lora', 'serif'], 'sans': ['Raleway', 'sans-serif'] },
+          borderRadius: { 'organic': '24px', 'organic-sm': '16px' },
+          boxShadow: { 'soft': '0 8px 32px rgba(0,0,0,0.08)', 'soft-lg': '0 16px 48px rgba(0,0,0,0.12)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .lightbox-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 100; align-items: center; justify-content: center; cursor: pointer; }
+    .lightbox-overlay.active { display: flex; }
+    .lightbox-overlay img { max-width: 90vw; max-height: 90vh; border-radius: 16px; object-fit: contain; }
+    @media (prefers-reduced-motion: reduce) { * { transition-duration: 0ms !important; } }
+  </style>
+</head>
+<body class="font-sans text-bark bg-cream">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
+      <a href="index.html" class="font-serif font-bold text-xl md:text-2xl text-forest">Hoveniersbedrijf Schotman</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="diensten.html" class="text-bark hover:text-forest transition-colors duration-200 cursor-pointer font-medium">Diensten</a>
+        <a href="projecten.html" class="text-forest font-semibold cursor-pointer">Projecten</a>
+        <a href="paddock-paradise.html" class="text-bark hover:text-forest transition-colors duration-200 cursor-pointer font-medium">Paddock Paradise</a>
+        <a href="contact.html" class="bg-forest text-white px-6 py-3 rounded-organic-sm font-semibold hover:bg-forest-dark transition-colors duration-200 cursor-pointer min-h-[44px] flex items-center">Contact</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden cursor-pointer min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Menu">
+        <svg class="w-7 h-7 text-bark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-cream-dark">
+      <div class="px-4 py-4 flex flex-col gap-3">
+        <a href="diensten.html" class="text-bark hover:text-forest py-2">Diensten</a>
+        <a href="projecten.html" class="text-forest font-semibold py-2">Projecten</a>
+        <a href="paddock-paradise.html" class="text-bark hover:text-forest py-2">Paddock Paradise</a>
+        <a href="contact.html" class="bg-forest text-white px-6 py-3 rounded-organic-sm font-semibold text-center">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pt-28 pb-16 bg-forest text-white">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <p class="text-white/70 font-semibold tracking-wide uppercase text-sm mb-3">Ons werk</p>
+      <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4">Projecten</h1>
+      <p class="text-white/80 text-lg max-w-2xl">Inspiratie nodig voor uw tuin? Hier staan projecten die door ons aangelegd zijn.</p>
+    </div>
+  </section>
+
+  <!-- Projecten Grid -->
+  <section class="py-20 bg-cream">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div class="bg-white rounded-organic overflow-hidden shadow-soft hover:shadow-soft-lg transition-shadow duration-300 cursor-pointer" onclick="openLightbox(this)">
+          <img src="images/project-1.jpeg" alt="Tuinproject" class="w-full h-64 object-cover" loading="lazy">
+          <div class="p-6">
+            <h3 class="font-serif text-xl font-bold text-bark mb-1">Bestrating Nijmegen</h3>
+            <p class="text-bark/60 text-sm">Nijmegen</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-organic overflow-hidden shadow-soft hover:shadow-soft-lg transition-shadow duration-300 cursor-pointer" onclick="openLightbox(this)">
+          <img src="images/project-2.jpeg" alt="Achtertuin Heesch" class="w-full h-64 object-cover" loading="lazy">
+          <div class="p-6">
+            <h3 class="font-serif text-xl font-bold text-bark mb-1">Achtertuin Heesch</h3>
+            <p class="text-bark/60 text-sm">Heesch</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-organic overflow-hidden shadow-soft hover:shadow-soft-lg transition-shadow duration-300 cursor-pointer" onclick="openLightbox(this)">
+          <img src="images/project-3.jpeg" alt="Achtertuin Ravenstein" class="w-full h-64 object-cover" loading="lazy">
+          <div class="p-6">
+            <h3 class="font-serif text-xl font-bold text-bark mb-1">Achtertuin Ravenstein</h3>
+            <p class="text-bark/60 text-sm">Ravenstein</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-organic overflow-hidden shadow-soft hover:shadow-soft-lg transition-shadow duration-300 cursor-pointer" onclick="openLightbox(this)">
+          <img src="images/project-4.jpeg" alt="Luie trap en groot terras Vught" class="w-full h-64 object-cover" loading="lazy">
+          <div class="p-6">
+            <h3 class="font-serif text-xl font-bold text-bark mb-1">Luie trap en groot terras</h3>
+            <p class="text-bark/60 text-sm">Vught</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-organic overflow-hidden shadow-soft hover:shadow-soft-lg transition-shadow duration-300 cursor-pointer" onclick="openLightbox(this)">
+          <img src="images/project-6.jpeg" alt="Parktuin Schaijk" class="w-full h-64 object-cover" loading="lazy">
+          <div class="p-6">
+            <h3 class="font-serif text-xl font-bold text-bark mb-1">Parktuin Schaijk</h3>
+            <p class="text-bark/60 text-sm">Schaijk</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-organic overflow-hidden shadow-soft hover:shadow-soft-lg transition-shadow duration-300 cursor-pointer" onclick="openLightbox(this)">
+          <img src="images/project-9.jpeg" alt="Tuinhuis Oss" class="w-full h-64 object-cover" loading="lazy">
+          <div class="p-6">
+            <h3 class="font-serif text-xl font-bold text-bark mb-1">Tuinhuis Oss</h3>
+            <p class="text-bark/60 text-sm">Oss</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-organic overflow-hidden shadow-soft hover:shadow-soft-lg transition-shadow duration-300 cursor-pointer" onclick="openLightbox(this)">
+          <img src="images/google_place_3.jpg" alt="Project" class="w-full h-64 object-cover" loading="lazy">
+          <div class="p-6">
+            <h3 class="font-serif text-xl font-bold text-bark mb-1">Voortuin Oss</h3>
+            <p class="text-bark/60 text-sm">Oss</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-organic overflow-hidden shadow-soft hover:shadow-soft-lg transition-shadow duration-300 cursor-pointer" onclick="openLightbox(this)">
+          <img src="images/paddock-1.jpeg" alt="Paddock Paradise" class="w-full h-64 object-cover" loading="lazy">
+          <div class="p-6">
+            <h3 class="font-serif text-xl font-bold text-bark mb-1">Paddock Paradise</h3>
+            <p class="text-bark/60 text-sm">Specialproject — paarden</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-organic overflow-hidden shadow-soft hover:shadow-soft-lg transition-shadow duration-300 cursor-pointer" onclick="openLightbox(this)">
+          <img src="images/google_place_4.jpg" alt="Project" class="w-full h-64 object-cover" loading="lazy">
+          <div class="p-6">
+            <h3 class="font-serif text-xl font-bold text-bark mb-1">Project Arnhem</h3>
+            <p class="text-bark/60 text-sm">Arnhem</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-forest text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-serif text-3xl font-bold text-white mb-4">Ook zo'n mooie tuin?</h2>
+      <p class="text-white/80 mb-8">Neem contact met ons op voor een vrijblijvend gesprek.</p>
+      <a href="contact.html" class="bg-white text-forest px-8 py-4 rounded-organic-sm font-semibold hover:bg-cream transition-colors duration-200 cursor-pointer inline-flex items-center min-h-[44px]">Contact opnemen</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-bark text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 text-center">
+      <p class="text-white/50 text-sm">© 2026 Hoveniersbedrijf Schotman · Gebouwd door <a href="https://www.code-lieshout.nl" class="hover:text-white underline cursor-pointer">Code Lieshout</a></p>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Vergroot">
+  </div>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', () => { document.getElementById('mobile-menu').classList.toggle('hidden'); });
+    function openLightbox(el) { const img = el.querySelector('img'); document.getElementById('lightbox-img').src = img.src; document.getElementById('lightbox').classList.add('active'); }
+    function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); }
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+</body>
+</html>

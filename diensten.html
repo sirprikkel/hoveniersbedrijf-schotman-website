@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diensten — Hoveniersbedrijf Schotman</title>
+  <meta name="description" content="Tuinontwerp, aanleg, onderhoud, beplantingsplan en renovatie. Hoveniersbedrijf Schotman uit Ravenstein verzorgt het allemaal.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { 'forest': '#228B22', 'forest-dark': '#1A6B1A', 'earth': '#8B4513', 'earth-light': '#A0522D', 'sky': '#87CEEB', 'cream': '#F5F5DC', 'cream-dark': '#EDE8D0', 'bark': '#2D1B0E' },
+          fontFamily: { 'serif': ['Lora', 'serif'], 'sans': ['Raleway', 'sans-serif'] },
+          borderRadius: { 'organic': '24px', 'organic-sm': '16px' },
+          boxShadow: { 'soft': '0 8px 32px rgba(0,0,0,0.08)', 'soft-lg': '0 16px 48px rgba(0,0,0,0.12)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { * { transition-duration: 0ms !important; } }
+  </style>
+</head>
+<body class="font-sans text-bark bg-cream">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
+      <a href="index.html" class="font-serif font-bold text-xl md:text-2xl text-forest">Hoveniersbedrijf Schotman</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="diensten.html" class="text-forest font-semibold cursor-pointer">Diensten</a>
+        <a href="projecten.html" class="text-bark hover:text-forest transition-colors duration-200 cursor-pointer font-medium">Projecten</a>
+        <a href="paddock-paradise.html" class="text-bark hover:text-forest transition-colors duration-200 cursor-pointer font-medium">Paddock Paradise</a>
+        <a href="contact.html" class="bg-forest text-white px-6 py-3 rounded-organic-sm font-semibold hover:bg-forest-dark transition-colors duration-200 cursor-pointer min-h-[44px] flex items-center">Contact</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden cursor-pointer min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Menu">
+        <svg class="w-7 h-7 text-bark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-cream-dark">
+      <div class="px-4 py-4 flex flex-col gap-3">
+        <a href="diensten.html" class="text-forest font-semibold py-2">Diensten</a>
+        <a href="projecten.html" class="text-bark hover:text-forest py-2">Projecten</a>
+        <a href="paddock-paradise.html" class="text-bark hover:text-forest py-2">Paddock Paradise</a>
+        <a href="contact.html" class="bg-forest text-white px-6 py-3 rounded-organic-sm font-semibold text-center">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pt-28 pb-16 bg-forest text-white">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <p class="text-white/70 font-semibold tracking-wide uppercase text-sm mb-3">Onze expertise</p>
+      <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4">Diensten</h1>
+      <p class="text-white/80 text-lg max-w-2xl">Van tuinontwerp tot volledige aanleg en onderhoud. Wij verzorgen voor elk budget een mooie en duurzame tuin.</p>
+    </div>
+  </section>
+
+  <!-- Ontwerp -->
+  <section class="py-20 bg-white" id="ontwerp">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="font-serif text-3xl font-bold text-bark mb-6">Tuinontwerp</h2>
+        <p class="text-bark/80 leading-relaxed mb-4">Uw ideale tuin begint bij een slim ingericht tuinontwerp. Samen met u nemen we uitgebreid de tijd om uw wensen en ideeën in kaart te brengen zodat er achter de tekentafel een tuinontwerp ontstaat dat precies bij u past.</p>
+        <p class="text-bark/80 leading-relaxed mb-4">In dat ontwerp wordt rekening gehouden met verhardingen, een juiste verhouding groen en mogelijke bouwkundige elementen. In de keuze van materialen geven wij duidelijk en helder advies.</p>
+        <p class="text-bark/80 leading-relaxed mb-6">Het eerste gesprek is vrijblijvend. U kunt al een tuinontwerp ontvangen vanaf <strong class="text-forest">€375,00</strong>.</p>
+        <a href="contact.html" class="bg-forest text-white px-8 py-4 rounded-organic-sm font-semibold hover:bg-forest-dark transition-colors duration-200 cursor-pointer inline-flex items-center min-h-[44px]">Vrijblijvend gesprek</a>
+      </div>
+      <img src="images/project-7.jpeg" alt="Tuinontwerp" class="rounded-organic shadow-soft w-full h-[350px] object-cover" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Beplanting -->
+  <section class="py-20 bg-cream" id="beplanting">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+      <img src="images/project-8.jpeg" alt="Beplantingsplan" class="rounded-organic shadow-soft w-full h-[350px] object-cover order-2 lg:order-1" loading="lazy">
+      <div class="order-1 lg:order-2">
+        <h2 class="font-serif text-3xl font-bold text-bark mb-6">Beplantingsplan & Advies</h2>
+        <p class="text-bark/80 leading-relaxed mb-4">Een beplantingsplan waar goed over nagedacht is betaalt zich op de lange termijn terug. Het gaat niet alleen om kleur en grootte — bepaalde planten hebben een zonnige en droge plek nodig, andere juist een schaduwrijke en vochtige plaats.</p>
+        <p class="text-bark/80 leading-relaxed mb-4">Er moet terdege rekening worden gehouden met het feit dat planten elkaar kunnen beconcurreren. Juiste beplanting vraagt veel vakkennis en u voorkomt veel ergernis door u te laten adviseren.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aanleg -->
+  <section class="py-20 bg-white" id="aanleg">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="font-serif text-3xl font-bold text-bark mb-6">Tuinaanleg</h2>
+        <p class="text-bark/80 leading-relaxed mb-4">Bij Hoveniersbedrijf Schotman werken enthousiaste vakbekwame hoveniers met ruime ervaring, die persoonlijk uw wensen inventariseren en vervolgens ook zorg dragen voor de aanleg van uw tuin.</p>
+        <p class="text-bark/80 leading-relaxed mb-4">Deze mate van betrokkenheid garandeert een perfecte uitvoering waarin niets aan het toeval wordt overgelaten. Wij gebruiken binnen elk budget topkwaliteit planten en bieden u de keuze uit een ruime sortering materialen zoals natuursteen, gebakken materiaal en duurzaam hout.</p>
+      </div>
+      <img src="images/project-1.jpeg" alt="Tuinaanleg" class="rounded-organic shadow-soft w-full h-[350px] object-cover" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Onderhoud -->
+  <section class="py-20 bg-cream" id="onderhoud">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+      <img src="images/project-5.jpeg" alt="Tuinonderhoud" class="rounded-organic shadow-soft w-full h-[350px] object-cover order-2 lg:order-1" loading="lazy">
+      <div class="order-1 lg:order-2">
+        <h2 class="font-serif text-3xl font-bold text-bark mb-6">Tuinonderhoud</h2>
+        <p class="text-bark/80 leading-relaxed mb-4">Elke tuin heeft met regelmaat aandacht nodig. Het snoeien van bomen en struiken en het wieden van onkruid zijn zaken die niet onderschat moeten worden — voor u het weet verandert uw prachtige tuin in een wilde tuin.</p>
+        <p class="text-bark/80 leading-relaxed mb-4">Niet iedereen heeft de tijd of mogelijkheid om zelf de tuin bij te houden. Wij nemen met onze ervaring en kennis het onderhoud graag op ons. Denk daarbij ook aan winterklaar maken, gazononderhoud en bemesting.</p>
+        <p class="text-bark/80 leading-relaxed">Ook het onderhoud van bedrijfsterreinen en openbaar groen nemen wij graag voor onze rekening.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Renovatie -->
+  <section class="py-20 bg-white" id="renovatie">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="font-serif text-3xl font-bold text-bark mb-6">Tuinrenovatie</h2>
+        <p class="text-bark/80 leading-relaxed mb-4">Hoveniersbedrijf Schotman is ook uiterst deskundig op het gebied van renovatie van bestaande tuinen. Het is van groot belang dat er oog is voor de omgeving en de waardevolle elementen die aanwezig zijn.</p>
+        <p class="text-bark/80 leading-relaxed mb-4">Bij renovatie kunt u denken aan het herstellen van een terras, een schutting vervangen of een nieuwe beplanting. Ook uw bestaande tuin herinrichten behoort tot de mogelijkheden.</p>
+        <a href="contact.html" class="bg-forest text-white px-8 py-4 rounded-organic-sm font-semibold hover:bg-forest-dark transition-colors duration-200 cursor-pointer inline-flex items-center min-h-[44px]">Neem contact op</a>
+      </div>
+      <img src="images/project-2.jpeg" alt="Tuinrenovatie" class="rounded-organic shadow-soft w-full h-[350px] object-cover" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-bark text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 grid md:grid-cols-3 gap-12">
+      <div>
+        <h3 class="font-serif text-xl font-bold mb-4">Hoveniersbedrijf Schotman</h3>
+        <p class="text-white/70">Passie voor tuinen. Al meer dan 15 jaar.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4">Navigatie</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">Home</a></li>
+          <li><a href="projecten.html" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">Projecten</a></li>
+          <li><a href="paddock-paradise.html" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">Paddock Paradise</a></li>
+          <li><a href="contact.html" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4">Contact</h4>
+        <ul class="space-y-2 text-white/70 text-sm">
+          <li>De Hammen 34, 5371 MK Ravenstein</li>
+          <li><a href="tel:+31622467080" class="hover:text-white cursor-pointer">06 22 46 70 80</a></li>
+          <li><a href="mailto:info@hoveniersbedrijfschotman.nl" class="hover:text-white cursor-pointer">info@hoveniersbedrijfschotman.nl</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 mt-12 pt-8 border-t border-white/10 text-center">
+      <p class="text-white/50 text-sm">© 2026 Hoveniersbedrijf Schotman · Gebouwd door <a href="https://www.code-lieshout.nl" class="hover:text-white underline cursor-pointer">Code Lieshout</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

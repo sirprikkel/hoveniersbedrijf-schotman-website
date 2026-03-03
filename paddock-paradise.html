@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paddock Paradise — Hoveniersbedrijf Schotman</title>
+  <meta name="description" content="Professionele aanleg van Paddock Paradise voor paarden. Tracksysteem, natuurlijke waterbron, Heritage omheining. Hoveniersbedrijf Schotman Ravenstein.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { 'forest': '#228B22', 'forest-dark': '#1A6B1A', 'earth': '#8B4513', 'earth-light': '#A0522D', 'sky': '#87CEEB', 'cream': '#F5F5DC', 'cream-dark': '#EDE8D0', 'bark': '#2D1B0E' },
+          fontFamily: { 'serif': ['Lora', 'serif'], 'sans': ['Raleway', 'sans-serif'] },
+          borderRadius: { 'organic': '24px', 'organic-sm': '16px' },
+          boxShadow: { 'soft': '0 8px 32px rgba(0,0,0,0.08)', 'soft-lg': '0 16px 48px rgba(0,0,0,0.12)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { * { transition-duration: 0ms !important; } }
+  </style>
+</head>
+<body class="font-sans text-bark bg-cream">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
+      <a href="index.html" class="font-serif font-bold text-xl md:text-2xl text-forest">Hoveniersbedrijf Schotman</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="diensten.html" class="text-bark hover:text-forest transition-colors duration-200 cursor-pointer font-medium">Diensten</a>
+        <a href="projecten.html" class="text-bark hover:text-forest transition-colors duration-200 cursor-pointer font-medium">Projecten</a>
+        <a href="paddock-paradise.html" class="text-forest font-semibold cursor-pointer">Paddock Paradise</a>
+        <a href="contact.html" class="bg-forest text-white px-6 py-3 rounded-organic-sm font-semibold hover:bg-forest-dark transition-colors duration-200 cursor-pointer min-h-[44px] flex items-center">Contact</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden cursor-pointer min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Menu">
+        <svg class="w-7 h-7 text-bark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-cream-dark">
+      <div class="px-4 py-4 flex flex-col gap-3">
+        <a href="diensten.html" class="text-bark hover:text-forest py-2">Diensten</a>
+        <a href="projecten.html" class="text-bark hover:text-forest py-2">Projecten</a>
+        <a href="paddock-paradise.html" class="text-forest font-semibold py-2">Paddock Paradise</a>
+        <a href="contact.html" class="bg-forest text-white px-6 py-3 rounded-organic-sm font-semibold text-center">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pt-28 pb-16 bg-earth text-white">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <p class="text-white/70 font-semibold tracking-wide uppercase text-sm mb-3">Uniek specialisme</p>
+      <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4">Paddock Paradise</h1>
+      <p class="text-white/80 text-lg max-w-2xl">Een simulatie van het natuurgebied het Great Basin in Noord-Amerika. Een totaalconcept waarbij de biologie en leefwijze van het paard als diersoort voorop staan.</p>
+    </div>
+  </section>
+
+  <!-- Wat is het -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="font-serif text-3xl font-bold text-bark mb-6">Wat is een Paddock Paradise?</h2>
+        <p class="text-bark/80 leading-relaxed mb-4">Een Paddock Paradise is een simulatie van het natuurgebied het Great Basin in Noord-Amerika. Een droog klimaat, dor, weids, rotsachtig en zeer spaarzaam begroeid met gras.</p>
+        <p class="text-bark/80 leading-relaxed mb-4">Het is een totaalconcept waarbij de biologie en leefwijze van het paard als diersoort voorop staan. Afhankelijk van het ontwerp geldt als vuistregel dat er 6 tot 8 paarden per hectare gehuisvest kunnen worden.</p>
+        <p class="text-bark/80 leading-relaxed text-sm italic">Informatie met dank van Femke Dölle</p>
+      </div>
+      <img src="images/paddock-1.jpeg" alt="Paddock Paradise aanleg" class="rounded-organic shadow-soft w-full h-[400px] object-cover" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Elementen -->
+  <section class="py-20 bg-cream">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <h2 class="font-serif text-3xl font-bold text-bark mb-12 text-center">De elementen</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <div class="bg-white rounded-organic p-8 shadow-soft">
+          <div class="bg-earth/10 w-12 h-12 rounded-2xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-earth" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-bark mb-3">Tracksysteem</h3>
+          <p class="text-bark/70 leading-relaxed">Een eindeloos padenstelsel zonder doodlopende paden. De paden zijn minimaal 2,5 tot maximaal 5 meter breed. Binnen dit padenstelsel worden activiteitscellen aangebracht die de paarden stimuleren zich te verplaatsen.</p>
+        </div>
+
+        <div class="bg-white rounded-organic p-8 shadow-soft">
+          <div class="bg-sky/20 w-12 h-12 rounded-2xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-bark mb-3">Natuurlijke waterbron</h3>
+          <p class="text-bark/70 leading-relaxed">Een sociale en centrale ontmoetingsplek. Een ruim open vlakte waar de paarden de omgeving goed in de gaten kunnen houden. De poel vangt ook hemelwater op en houdt de paden droog door glooiend landschap.</p>
+        </div>
+
+        <div class="bg-white rounded-organic p-8 shadow-soft">
+          <div class="bg-earth/10 w-12 h-12 rounded-2xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-earth" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6z"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-bark mb-3">Natuurlijke (half)verharding</h3>
+          <p class="text-bark/70 leading-relaxed">De tracks worden voorzien van gravel en menggranulaat. De hoeven ontwikkelen zich beter en slijten natuurlijk — paarden lopen zonder ijzers, zoals de wilde paarden in het Great Basin.</p>
+        </div>
+
+        <div class="bg-white rounded-organic p-8 shadow-soft">
+          <div class="bg-forest/10 w-12 h-12 rounded-2xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-bark mb-3">Heritage omheining</h3>
+          <p class="text-bark/70 leading-relaxed">Vervaardigd uit 100% zuiver hi-polymeer hars met UV-inhibitoren. Weersbestendig, kleur- en vormvast, onderhoudsvrij en volledig recyclebaar. Veilig voor paarden.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Ons project -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-serif text-3xl font-bold text-bark mb-4">Ons Paddock Paradise project</h2>
+        <p class="text-bark/70 max-w-2xl mx-auto">Met veel plezier hebben wij een Paddock Paradise aangelegd op een oppervlakte van ca. 2.300m² voor 3 paarden. In samenwerking met architect Femke Dölle.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <img src="images/paddock-1.jpeg" alt="Paddock Paradise aanleg" class="rounded-organic shadow-soft w-full h-[300px] object-cover" loading="lazy">
+        <img src="images/paddock-2.jpeg" alt="Paddock Paradise resultaat" class="rounded-organic shadow-soft w-full h-[300px] object-cover" loading="lazy">
+      </div>
+      <p class="text-bark/70 text-center mt-8 max-w-2xl mx-auto">Volgens de eigenaar waren de paarden dol gelukkig! De weilanden worden ingezet als leefgebied voor insecten en om meer biodiversiteit te creëren.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-earth text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-serif text-3xl font-bold text-white mb-4">Nieuwsgierig geworden?</h2>
+      <p class="text-white/80 mb-8">Neem gerust contact met ons op. Dan leggen wij graag alles uit onder het genot van een bakje koffie of thee.</p>
+      <a href="contact.html" class="bg-white text-earth px-8 py-4 rounded-organic-sm font-semibold hover:bg-cream transition-colors duration-200 cursor-pointer inline-flex items-center min-h-[44px]">Contact opnemen</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-bark text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 text-center">
+      <p class="text-white/50 text-sm">© 2026 Hoveniersbedrijf Schotman · Gebouwd door <a href="https://www.code-lieshout.nl" class="hover:text-white underline cursor-pointer">Code Lieshout</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', () => { document.getElementById('mobile-menu').classList.toggle('hidden'); });
+  </script>
+</body>
+</html>
